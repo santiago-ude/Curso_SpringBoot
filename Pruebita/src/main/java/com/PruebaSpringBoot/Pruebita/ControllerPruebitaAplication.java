@@ -27,5 +27,14 @@ public class ControllerSpringBoot {
     }
 
 
+    //Ingresa nombre por el path
+    @GetMapping("/Persona/{nombre}/{apellido}/{edad}")
+    public String cursoSpringBoot(@PathVariable String nombre, @PathVariable String apellido,@PathVariable int edad){
+
+        return String.format("El nombre de la persona es " + nombre + " " + apellido + " y la edad es " + edad);
+
+    }
+
+
 
 }
